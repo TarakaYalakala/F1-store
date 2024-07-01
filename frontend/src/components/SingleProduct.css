@@ -1,0 +1,99 @@
+.right-icon-rs {
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.left-icon-rs{
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icons-holders{
+    display: flex;
+    align-items: center;
+}
+
+.product-img-rs{
+    background-color: pink;
+    width: 350px;
+    height: 400px;
+    border-radius: 10px;
+    margin-left: 150px;
+    -webkit-box-shadow: 7px 15px 23px 22px rgba(255,237,255,1);
+-moz-box-shadow: 7px 15px 23px 22px rgba(255,237,255,1);
+box-shadow: 7px 15px 23px 22px rgba(255,237,255,1);
+}
+
+.brand-rs{
+    font-size: 28px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.title-rs{
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.cts-container{
+    margin-left: 50px;
+}
+
+.description-rs {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cart-rs-btn {
+    height: 50px;
+    width: 150px;
+    font-family: sans-serif;
+    font-weight: 700;
+    background-color: white;
+    color: rgb(159, 32, 137);
+    border: 2px solid rgb(159, 32, 137);
+}
+
+
+.cart-buy-rs {
+    height: 50px;
+    width: 150px;
+    background-color: rgb(159, 32, 137);
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+}
+
+.ratings-rs{
+    height: 30px;
+    width: 50px;
+    background-color: rgb(3, 141, 99);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.rate{
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+}

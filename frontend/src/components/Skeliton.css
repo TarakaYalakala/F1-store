@@ -1,0 +1,21 @@
+.ske-ctr{
+    margin: 20px;
+}
+.ske-container{
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.cs{
+    margin: 5px;
+}
+.btns {
+    margin: 10px;
+    margin-left: 55px;
+
+}
+.mains {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

@@ -1,0 +1,100 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.brand-headers {
+    /* background-color: #b8c3dae3; */
+    background-color: #080707;
+    color: #ffff;
+    font-family: sans-serif;
+    height: 100vh;
+    width: 100%;
+    background: url("../components/images/E-commerce img (3).png");
+}
+
+@media screen and (max-width: 380px){
+    .brand-headers {
+     background: url("./images/E-commerce img (4).png");
+    }
+ }
+
+
+.brand-sign {
+    font-size: 30px;
+     color: #2f343b;
+     font-weight: 700;
+     font-style: italic;
+}
+
+@media screen and (max-width: 380px){
+    .brand-sign {
+      font-size: 25px;
+      font-weight: 600;
+      font-style: italic;
+    }
+}
+
+.container-sign {
+    height: 350px;
+    width: 300px;
+    background-color: #D4DEED;
+    border-radius: 5px;
+    box-shadow: rgb(135, 138, 141) 0px 20px 30px -10px;
+    /* box-shadow: rgba(204, 201, 201, 0.35) 0px 5px 15px; */
+    /* box-shadow: rgba(214, 214, 214, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
+    color: black;
+    padding: 20px;
+}
+
+.header-signin {
+    display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 115px;
+     overflow-x: hidden;
+}
+
+.signin-tst {
+    font-size: 25px;
+    font-weight: 650;
+    color: rgb(216, 27, 27);
+    margin: 15px;
+    padding: 5px;
+}
+
+.name-sp {
+     align-items: center;
+     border: none;
+     border-bottom: 2px solid black;
+     background-color: #D4DEED;
+     height: 20px;
+}
+
+.name-sp:focus {
+    outline: none; 
+    border-bottom: 3px solid #12063d; 
+    background-color: #D4DEED;
+}
+
+.button-sp {
+    background: linear-gradient(45deg, hsl(324, 61%, 66%), #544fda);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 80px;
+    cursor: pointer;
+    transition: all 0.5s;
+    box-shadow: 0 0 20px rgba(255, 110, 196, 0.5), 0 0 20px rgba(120, 115, 245, 0.5);
+}
+
+.button-sp:hover {
+    box-shadow: 0 0 40px rgba(187, 77, 143, 0.75), 0 0 30px rgba(120, 115, 245, 0.75);
+}

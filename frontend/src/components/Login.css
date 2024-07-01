@@ -1,0 +1,126 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.header {
+    background-color: #0f141d;
+    color: #ffff;
+    font-family: sans-serif;
+    height: 100vh;
+    width: 100%;
+    background: url("../components/images/E-commerce img (3).png");
+  }
+
+  @media screen and (max-width: 380px){
+     .header {
+      background: url("./images/E-commerce img (4).png");
+     }
+  }
+  
+  .brand {
+     font-size: 30px;
+     color: #050504;
+     font-weight: 700;
+     font-style: italic;
+  }
+  
+  @media screen and (max-width: 380px){
+      .brand {
+        font-size: 25px;
+        font-weight: 600;
+        font-style: italic;
+      }
+  }
+  
+  .body {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 115px;
+     overflow-x: hidden;
+  }
+  
+  .main-continer {
+     height: 390px;
+     width: 380px;
+     background-color: #D4DEED;
+     border-radius: 5px;
+     box-shadow: rgb(135, 138, 141) 0px 20px 30px -10px;
+     /* box-shadow: rgba(204, 201, 201, 0.35) 0px 5px 15px; */
+     /* box-shadow: rgba(214, 214, 214, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
+     color: black;
+     padding: 20px;
+  }
+  
+  .lg-in {
+    font-size: 25px;
+    font-weight: 650;
+    color: rgb(216, 27, 27);
+    margin: 25px;
+    padding: 5px;
+  }
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure the inputs take the full width */
+    padding: 0 18px; 
+  }
+   
+  .email {
+    font-weight: 500;
+    font-size: 18px;
+    color: #1f0e0b;
+  }
+  
+  .input-txt {
+    align-items: center;
+     border: none;
+     border-bottom: 2px solid black;
+     background-color: #D4DEED;
+     height: 20px;
+  }
+  
+  .input-txt:focus {
+    outline: none; 
+    border-bottom: 2px solid #717174; 
+    background-color: #D4DEED;
+  }
+  
+  
+  .input-pass {
+    align-items: center;
+     border: none;
+     border-bottom: 2px solid rgb(139, 136, 136);
+     background-color: #D4DEED;
+     height: 20px;
+  }
+  
+  .input-pass:focus {
+    outline: none; 
+    border-bottom: 2px solid #171058; 
+    background-color: #D4DEED;
+  }
+  
+  .glow-button {
+    background: linear-gradient(45deg, hsl(324, 61%, 66%), #544fda);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 60px;
+    cursor: pointer;
+    transition: all 0.5s;
+    box-shadow: 0 0 20px rgba(255, 110, 196, 0.5), 0 0 20px rgba(120, 115, 245, 0.5);
+  }
+  
+  .glow-button:hover {
+    box-shadow: 0 0 40px rgba(187, 77, 143, 0.75), 0 0 30px rgba(120, 115, 245, 0.75);
+  }

@@ -1,0 +1,40 @@
+.main-footer {
+    height: 45vh;
+    padding: 20px;
+    width: 100%;
+    background-color: rgb(58, 50, 48);
+}
+
+.footer-anchor {
+    color: white;
+    font-family: sans-serif;
+}
+
+.footer-anc {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 50px;
+}
+
+.footer-images {
+    height: 150px;
+    width: 200px;
+    background-color: red;
+}
+
+.footer-content-anc {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.footer-logos {
+    margin: 25px;
+    padding: 5px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
