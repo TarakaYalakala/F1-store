@@ -97,3 +97,9 @@ box-shadow: 7px 15px 23px 22px rgba(255,237,255,1);
     color: rgb(255, 255, 255);
     font-size: 19px;
 }
+
+.price-tags {
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 650;
+}

@@ -71,6 +71,12 @@ console.log(data);
               <i className="fa-solid fa-star" style={{color:"white"}}></i>
               </div>
             </div>
+            <div className="price-tags">
+               ₹ {item.Price}
+            </div>
+            <div className="viewmore">
+              <a href={`/products/${params.brand}`}>View more </a>
+            </div>
            </div>
            </div>
           
@@ -79,10 +85,6 @@ console.log(data);
         }) }
         <br />
         <br />
-        <div className="similar">
-          View similar Products.
-        </div>
-
       </div>
       <Footer/>
     </div>
