@@ -72,17 +72,17 @@ function Signin() {
                 Sign in
               </div>
               <form onSubmit={handelSubmit}>
-                <label>Name: </label>
+                <label className='label-sign'>Name: </label>
                 <input type="text" name="tsx" id="tsx" placeholder='Enter your name' className='name-sp'onChange={(e) => {setName(e.target.value)}} autoComplete='off'/>
                 <br />
                 <br />
-                <label>Email: </label>
+                <label className='label-sign'>Email: </label>
                 <input type="email" name="mail" id="mail" placeholder='Enter your email' className='name-sp' onChange={(e) => {setEmail(e.target.value)}} autoComplete='off'/>
                 {/* {support? <p></p>: <p style={{color:"red",fontSize:"12px"}}>{errData}</p>} */}
                 <br />
                 <br />
                 {/* password */}
-                <label>Password: </label>
+                <label className='label-sign'>Password: </label>
                 <input type="password" name="pass" id="pass" placeholder='Enter your password' className='name-sp' onChange={(e) => {setPassword(e.target.value)}} autoComplete='off'/>
                 <br />
                 <br />

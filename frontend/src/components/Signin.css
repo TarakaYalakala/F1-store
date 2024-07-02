@@ -12,7 +12,7 @@ html, body {
     font-family: sans-serif;
     height: 100vh;
     width: 100%;
-    background: url("../components/images/E-commerce img (3).png");
+    background: url("../components/images/SparksF1.webp");
 }
 
 @media screen and (max-width: 380px){
@@ -24,7 +24,7 @@ html, body {
 
 .brand-sign {
     font-size: 30px;
-     color: #2f343b;
+     color: #59b6c2;
      font-weight: 700;
      font-style: italic;
 }
@@ -38,8 +38,8 @@ html, body {
 }
 
 .container-sign {
-    height: 350px;
-    width: 300px;
+    height: 450px;
+    width: 380px;
     background-color: #D4DEED;
     border-radius: 5px;
     box-shadow: rgb(135, 138, 141) 0px 20px 30px -10px;
@@ -97,4 +97,10 @@ html, body {
 
 .button-sp:hover {
     box-shadow: 0 0 40px rgba(187, 77, 143, 0.75), 0 0 30px rgba(120, 115, 245, 0.75);
+}
+
+.label-sign{
+    color: black;
+    font-weight: 650;
+    font-family: sans-serif;
 }
