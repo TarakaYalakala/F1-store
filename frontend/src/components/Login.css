@@ -12,7 +12,7 @@ html, body {
     font-family: sans-serif;
     height: 100vh;
     width: 100%;
-    background: url("../components/images/E-commerce img (3).png");
+    background: url("../components/images/SparksF1.webp");
   }
 
   @media screen and (max-width: 380px){
@@ -23,7 +23,7 @@ html, body {
   
   .brand {
      font-size: 30px;
-     color: #050504;
+     color: #55bcc4;
      font-weight: 700;
      font-style: italic;
   }

@@ -37,7 +37,7 @@ function Navbar() {
                 </NavLink>
                 </li>
                 <li>
-                <NavLink to="/login" className="active" onClick={handelToken}>Logout <i className="fa-solid fa-right-from-bracket fa-xl" style={{color:"#f5f5f5"}}></i></NavLink>
+                <NavLink to="/login" className="active" onClick={handelToken}>Logout <i className="fa-solid fa-right-from-bracket " style={{color:"#f5f5f5"}}></i></NavLink>
                 </li>
             </li>
         </ul>
