@@ -5,8 +5,8 @@ import Products from './components/Products'
 import { RouterProvider, createBrowserRouter} from 'react-router-dom'
 import Card from './components/Card'
 import Cart from './components/Cart'
-import Store from './components/Store'
 import SingleProduct from './components/SingleProduct'
+import Page from "./components/Page"
 
 function App() {
 
@@ -37,7 +37,7 @@ function App() {
     },
     {
       path:"/products/:brand",
-      element:<><Store/></>
+      element:<><Page/></>
     },
     {
       path:"/products/:brand/:id",
