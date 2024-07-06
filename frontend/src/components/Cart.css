@@ -1,0 +1,41 @@
+.box-ctr-cs {
+    margin: 20px;
+    height: 380px;
+    width: 250px;
+    background-color: rgb(195, 232, 235);
+    padding: 10px;
+}
+
+.details-cs {
+    margin-top: 5px;
+}
+
+.btn-cs{
+    height: 45px;
+    width: 90px;
+    border: 2px solid blue;
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+.btn-remove {
+    height: 45px;
+    width: 120px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    font-family: sans-serif;
+    border: none;
+}
+
+.details-cs {
+    font-family: sans-serif;
+    font-weight: 550;
+    font-stretch: condensed;
+}
+
+.price-cart {
+    font-family: sans-serif;
+    font-weight: 550;
+    font-size: 22px;
+}

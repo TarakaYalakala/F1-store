@@ -34,9 +34,9 @@ function SingleProduct() {
     api()
   }, [])
 
-  const handelAddItems = (title,description,image) => {
+  const handelAddItems = (title,description,image,price) => {
     const imageBase64 = Buffer.from(image).toString('base64');
-    dispatch(addProducts({Title: title, Description: description, Image: imageBase64}))
+    dispatch(addProducts({Title: title, Description: description, Image: imageBase64, Price: price}));
   }
 
 console.log(data);
@@ -63,7 +63,7 @@ console.log(data);
            <div className="addcart-btns" style={{display:"flex",gap:"30px",marginLeft:"170px",marginTop:"10px"}}>
             <div className="cart-btn">
               <span  className="d-inline-block" data-toggle="popover" data-content="Disabled popover">
-              <button className='cart-rs-btn' onClick={() => {handelAddItems(item.Title, item.Description, item.Photo.data.data)}}><i className="fa-solid fa-cart-shopping fa-bounce fa-xl" style={{color:"#254888"}}></i>Add To Cart</button>
+              <button className='cart-rs-btn' onClick={() => {handelAddItems(item.Title, item.Description, item.Photo.data.data, item.Price)}}><i className="fa-solid fa-cart-shopping fa-bounce fa-xl" style={{color:"#254888"}}></i>Add To Cart</button>
               </span>
             </div>
             <div className="buy">
