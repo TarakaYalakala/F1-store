@@ -21,6 +21,8 @@ function Login() {
     const [Message, setMessage] = useState();
     const [Name, setName] = useState();
     const [id, setid] = useState();
+    const [ErrorData, setErrorData] = useState();
+    const [falseData, setfalseData] = useState(false);
 
 const tokenObj = {
   token: token,
@@ -50,10 +52,11 @@ const tokenObj = {
           
         }).catch((err) => {
            console.log(err);
+           setErrorData(err.response.data.Error);
+           setfalseData(true);
         })
        
     }
-
 
 
   return (
@@ -80,6 +83,7 @@ const tokenObj = {
                 <br />
                 <button className="glow-button" type='submit'>Submit</button>
                 </form>
+                {falseData?<div style={{color:"red",fontFamily:"sans-serif",fontSize:"15px"}}>{ErrorData}</div>:""}
                 <Link to='/signin' className="register">
                   Create a account 
                 </Link>

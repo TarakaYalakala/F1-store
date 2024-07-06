@@ -7,9 +7,15 @@ import Navbar from "../components/Navbar"
 import { useNavigate } from 'react-router-dom';
 import { Buffer } from 'buffer';
 import Footer from './Footer';
+import {addProducts} from "./Slice"
+import { useSelector, useDispatch } from 'react-redux'
 
 
 function SingleProduct() {
+
+  const CartProduct = useSelector((state) => state.cart.cart);
+
+  const dispatch = useDispatch();
 
   const navigate = useNavigate();
 
@@ -27,6 +33,11 @@ function SingleProduct() {
     }
     api()
   }, [])
+
+  const handelAddItems = (title,description,image) => {
+    const imageBase64 = Buffer.from(image).toString('base64');
+    dispatch(addProducts({Title: title, Description: description, Image: imageBase64}))
+  }
 
 console.log(data);
 
@@ -51,7 +62,9 @@ console.log(data);
            <br />
            <div className="addcart-btns" style={{display:"flex",gap:"30px",marginLeft:"170px",marginTop:"10px"}}>
             <div className="cart-btn">
-              <button className='cart-rs-btn'><i className="fa-solid fa-cart-shopping fa-bounce fa-xl" style={{color:"#254888"}}></i>Add To Cart</button>
+              <span  className="d-inline-block" data-toggle="popover" data-content="Disabled popover">
+              <button className='cart-rs-btn' onClick={() => {handelAddItems(item.Title, item.Description, item.Photo.data.data)}}><i className="fa-solid fa-cart-shopping fa-bounce fa-xl" style={{color:"#254888"}}></i>Add To Cart</button>
+              </span>
             </div>
             <div className="buy">
               <button className='cart-buy-rs'><i className="fa-solid fa-angles-right fa-beat fa-xl" style={{color: "#ffffff",gap:"10px"}}></i>Buy Now</button>

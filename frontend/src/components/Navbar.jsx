@@ -1,9 +1,12 @@
 import React from 'react'
 import './Navbar.css'
 import { NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 
 function Navbar() {
+
+  const CartItem = useSelector((state) => state.cart.cart);
 
 
   const handelToken = () => {
