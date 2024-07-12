@@ -8,6 +8,7 @@ import ts from "../components/images/Mercedes-Tshirts/Mercedes-Tshirt-2.jpeg"
 import { useState, useEffect } from 'react';
 import { Buffer } from 'buffer';
 import Skeliton from './Skeliton';
+import { Link } from 'react-router-dom';
 
 
 function Page() {
@@ -92,7 +93,7 @@ function Page() {
                   <div>{item.Brand}</div>
                   <div>Price: {item.Price}$</div>
                   <div>Ratings: {item.Rating}</div>
-                  <a href={`/products/${item.Brand}/${item._id}`} className='prd-anc'>View Product</a>
+                  <Link to={`/products/${item.Brand}/${item._id}`} className='prd-anc'>View Product</Link>
                 </div>
               </div>
                </div>
@@ -106,7 +107,7 @@ function Page() {
                <div>Mercedes & Puma</div>
                <div>Price: 55$</div>
                <div>Ratings: 4</div>
-               <a href="/products" className='prd-anc'>View Product</a>
+               <Link to="/products" className='prd-anc'>View Product</Link>
              </div>
            </div>:<Skeliton/>}
             </div>

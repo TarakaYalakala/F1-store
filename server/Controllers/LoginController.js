@@ -21,7 +21,6 @@ const LoginData =  async (req,res) => {
  
           const token = jwt.sign({ id:user._id, Email: user.Email, Name: user.Name }, "hasher.io");
           console.log(token);
- 
            return res.status(200).json({
               Message: "Login completed successfully",
               id:user._id,
@@ -119,7 +118,6 @@ const getAllProducts =  async (req,res) => {
                console.log(err);
             }
          }
-        
 
 
  module.exports = {
