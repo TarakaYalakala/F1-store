@@ -16,6 +16,10 @@
     border: 2px solid blue;
     color: rgb(0, 0, 0);
     background-color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
 }
 
 .btn-remove {
@@ -38,4 +42,21 @@
     font-family: sans-serif;
     font-weight: 550;
     font-size: 22px;
+}
+
+.ctrs-rs {
+    background: url("../components//images/neumorphic-preloader.png");
+    height: 91vh;
+}
+
+.isempty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    font-weight: 750;
+    font-size: 40px;
+    color: whitesmoke;
 }
