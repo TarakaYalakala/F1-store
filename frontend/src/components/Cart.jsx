@@ -3,6 +3,10 @@ import Navbar from './Navbar';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeProducts } from './Slice';
 import "./Cart.css";
+import { Link } from 'react-router-dom';
+import empty from "../components/images/neumorphic-preloader.png"
+
+
 
 function Cart() {
   const dispatch = useDispatch();
@@ -26,7 +30,9 @@ function Cart() {
     <div>
       <Navbar/>
       {length ? (
-        <div>Cart is Empty Now</div>
+        <div className="ctrs-rs">
+          <span className='isempty'>Cart is Empty</span>
+        </div>
       ) : (
         CartItems.map((item, id) => (
           <div key={id} className='main-ctr-cs'>
@@ -39,7 +45,7 @@ function Cart() {
                 <p className='price-cart'>Price: {item.Price}₹</p>
               </div>
               <div className="btns-cs" style={{display:"flex",gap:"10px"}}>
-                <button className='btn-cs'>Buy now</button>
+                <Link to="/home" className='btn-cs'>Buy now</Link>
                 <button className='btn-remove' onClick={() => handelRemove(id)}>Remove item</button>
               </div>
             </div>

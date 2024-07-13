@@ -17,13 +17,23 @@ function Page() {
   const params = useParams();
   const [product, setproduct] = useState([]);
   const [support, setsupport] = useState(false);
+  const [store, setstore] = useState([]);
   const [ske, setske] = useState(false);
 
   useEffect(() => {
     const api = async() => {
-      setTimeout(() => {
-        setske(true);
-      }, 2000);
+      const Brand = "Mercedes"
+      // End points::  http://localhost:8000/product/Mercedes
+
+
+      axios.post(`http://localhost:8000/product/${Brand}`).then((res) => {
+        setstore(res.data.Data);
+        setTimeout(() => {
+          setske(true);
+        }, 2000);
+      }).catch((err) => {
+        console.log(err);
+      })
     }
     api();
   }, [])
@@ -82,6 +92,9 @@ function Page() {
         <div className="right-container-store">
           <div className="box-right">
             <div className="right-products">
+              {/* 22 */}
+
+
              { support ? product.map((item,id) => {
               return(
                <div className='sss' key={id}>
@@ -99,17 +112,24 @@ function Page() {
                </div>
                   
               )
-             }): ske ? <div className="product-containers">
+             }): ske ? store.map((items,ids) => {
+                 return (  
+                  <div className="product-containers" key={ids}>
              <div className="product-image">
-               <img src={ts} alt="T-shirt" style={{ height: "100%", width: "100%" }} />
+               <img src={`data:image/jpeg;base64,${Buffer.from(items.Photo.data.data).toString('base64')}`} alt="T-shirt" style={{ height: "100%", width: "100%" }} />
              </div>
              <div className="product-info">
-               <div>Mercedes & Puma</div>
-               <div>Price: 55$</div>
-               <div>Ratings: 4</div>
-               <Link to="/products" className='prd-anc'>View Product</Link>
+               <div>{items.Brand}</div>
+               <div>Price: {items.Price}$</div>
+               <div>Ratings:Price: {items.Rating}$</div>
+               <Link to="/products/:brand" className='prd-anc'>View Product</Link>
              </div>
-           </div>:<Skeliton/>}
+           </div>
+
+                 )
+             }): <Skeliton/>}
+
+
             </div>
           </div>
         </div>
