@@ -1,0 +1,64 @@
+.order-images {
+    margin: 25px;
+    height: 350px;
+    width: 350px;
+}
+
+.main-ctr-orders {
+    margin-left: 20px;
+    margin-bottom: 55px;
+}
+
+/* .orders-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+} */
+
+.three-orders{
+    margin: 50px;
+    display: flex;
+    gap: 10px;
+}
+
+.bdy-btn{
+    height: 35px;
+    width: 70px;
+    background-color: rgb(87, 89, 179);
+    border: none;
+    font-size: 20px;
+    color: white;
+    font-size: 25px;
+}
+
+.qty {
+    margin: 25px;
+    font-size: 40px;
+    font-family: sans-serif;
+}
+
+.counts{
+    font-size: 20px;
+}
+
+.remove-orders {
+    background-color: rgb(55, 157, 170);
+    border: none;
+    padding: 10px;
+    color: whitesmoke;
+}
+
+.buynow a {
+    text-decoration: none;
+    font-size: 22px;
+    font-family: sans-serif;
+    height: 30px;
+    width: 150px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: azure;
+    padding: 10px;
+}
+
