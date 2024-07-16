@@ -7,6 +7,7 @@ import Card from './components/Card'
 import Cart from './components/Cart'
 import SingleProduct from './components/SingleProduct'
 import Page from "./components/Page"
+import Orders from './components/Orders'
 
 function App() {
 
@@ -42,6 +43,10 @@ function App() {
     {
       path:"/products/:brand/:id",
       element:<><SingleProduct/></>
+    },
+    {
+      path:"/orders",
+      element:<><Orders/></>
     }
   ])
 

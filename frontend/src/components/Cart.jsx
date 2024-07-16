@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeProducts } from './Slice';
+import { removeProducts,addOrder } from './Slice';
 import "./Cart.css";
 import { Link } from 'react-router-dom';
-import empty from "../components/images/neumorphic-preloader.png"
 
 
 
 function Cart() {
   const dispatch = useDispatch();
   const CartItems = useSelector((state) => state.cart.cart);
+  const Orderitems = useSelector((state) => state.cart.orders);
 
   const [length, setLength] = useState(false);
 
@@ -22,9 +22,14 @@ function Cart() {
     }
   }, [CartItems]);
 
-  const handelRemove = (id) => {
-    dispatch(removeProducts(id));
+  const handelRemove = async(id) => {
+     dispatch(removeProducts(id));
   };
+
+  const handelOrders = async(image,price,description) => {
+     dispatch(addOrder({Image:image,Price:price,Description:description}));
+     console.log(Orderitems);
+  }
 
   return (
     <div>
@@ -45,7 +50,7 @@ function Cart() {
                 <p className='price-cart'>Price: {item.Price}₹</p>
               </div>
               <div className="btns-cs" style={{display:"flex",gap:"10px"}}>
-                <Link to="/home" className='btn-cs'>Buy now</Link>
+                <Link to="/orders" className='btn-cs' onClick={() => {handelOrders(item.Image,item.Price,item.Description)}}>Buy now</Link>
                 <button className='btn-remove' onClick={() => handelRemove(id)}>Remove item</button>
               </div>
             </div>

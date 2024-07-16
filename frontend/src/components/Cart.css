@@ -20,6 +20,7 @@
     align-items: center;
     text-decoration: none;
     justify-content: center;
+    cursor: pointer;
 }
 
 .btn-remove {

@@ -37,9 +37,9 @@ function SingleProduct() {
   const handelAddItems = (title,description,image,price) => {
     const imageBase64 = Buffer.from(image).toString('base64');
     dispatch(addProducts({Title: title, Description: description, Image: imageBase64, Price: price}));
+    console.log(CartProduct);
   }
 
-console.log(data);
 
   return (
     <div>
