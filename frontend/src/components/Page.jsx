@@ -1,10 +1,9 @@
 import React from 'react'
-import { useFetchers, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Navbar from './Navbar';
 import "./Page.css"
 import Footer from "./Footer"
 import axios from "axios"
-import ts from "../components/images/Mercedes-Tshirts/Mercedes-Tshirt-2.jpeg"
 import { useState, useEffect } from 'react';
 import { Buffer } from 'buffer';
 import Skeliton from './Skeliton';
@@ -22,11 +21,12 @@ function Page() {
 
   useEffect(() => {
     const api = async() => {
-      const Brand = "Mercedes"
+      const Brand = "Mercedes";
+      // Mercedes
       // End points::  http://localhost:8000/product/Mercedes
 
 
-      axios.post(`http://localhost:8000/product/${Brand}`).then((res) => {
+      axios.post(`http://localhost:8000/product/Mercedes`).then((res) => {
         setstore(res.data.Data);
         setTimeout(() => {
           setske(true);
@@ -42,6 +42,7 @@ function Page() {
 
   const handelRadio = async (brand) => {
     axios.post(`http://localhost:8000/product/${brand}`).then((res) => {
+      // http://localhost:8000/product/Mercedes
       setproduct(res.data.Data);
       setsupport(true);
     }).catch((err) => { console.log(err) });
@@ -116,6 +117,7 @@ function Page() {
                  return (  
                   <div className="product-containers" key={ids}>
              <div className="product-image">
+              {console.log(items.Photo.data)}
                <img src={`data:image/jpeg;base64,${Buffer.from(items.Photo.data.data).toString('base64')}`} alt="T-shirt" style={{ height: "100%", width: "100%" }} />
              </div>
              <div className="product-info">

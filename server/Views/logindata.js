@@ -16,8 +16,8 @@ router.get("/", async(req,res) => {
      })
 });
 
-router.post("/signin", SigninData)
 
+router.post("/signin", SigninData);
 
 router.post("/login",LoginData);
 
