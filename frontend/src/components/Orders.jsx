@@ -5,6 +5,8 @@ import {addOrder,removeOrder} from './Slice'
 import Footer from './Footer';
 import { useState } from 'react';
 import {Link} from "react-router-dom"
+import { useNavigate } from 'react-router-dom';
+import Buynow from './Buynow';
 
 function Orders() {
 
@@ -12,6 +14,8 @@ function Orders() {
     const dispatch = useDispatch();
 
     const [count, setcount] = useState(1);
+    const [alert, setalert] = useState(false);
+    const navigate = useNavigate();
 
 
     const handelinc = () => {
@@ -24,6 +28,13 @@ function Orders() {
       } else {
         setcount(count -1);
       }
+    }
+
+    const handelAlert = () => {
+       setalert(!alert);
+       setTimeout(() => {
+         navigate("/products/:brand");
+       }, 1000);
     }
 
   return (
@@ -40,7 +51,7 @@ function Orders() {
             <p>Title: T-shirts</p>
             
             <div className="orders-flex">
-            <button onClick={() => dispatch(removeOrder(index))} className='remove-orders'>Remove from Orders</button>
+            <Link to="/cart" onClick={() => dispatch(removeOrder(index))} className='remove-orders'>Remove from Orders</Link>
             <div className="qty">Select Quantity</div>
             <div className="three-orders">
               <button className='bdy-btn' onClick={handeldec}>-</button>
@@ -50,10 +61,11 @@ function Orders() {
 
             </div>
 
-            <div className="buynow">
-              <Link to='/home'>Order now</Link>
-            </div>
+            { alert ? <Buynow/>: ""}
 
+            <div className="buynow">
+            <button onClick={handelAlert}>Order now</button>
+            </div>
           </div>
         ))}
       </div>
