@@ -8,6 +8,7 @@ import Cart from './components/Cart'
 import SingleProduct from './components/SingleProduct'
 import Page from "./components/Page"
 import Orders from './components/Orders'
+import Buynow from './components/Buynow'
 
 function App() {
 
@@ -47,6 +48,10 @@ function App() {
     {
       path:"/orders",
       element:<><Orders/></>
+    },
+    {
+      path:"/orders/Buynow",
+      element:<><Buynow/></>
     }
   ])
 
