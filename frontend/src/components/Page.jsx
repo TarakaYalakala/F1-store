@@ -53,7 +53,6 @@ function Page() {
   return (
     <div>
       <Navbar />
-      <p>Sort by Brand: {JSON.stringify(params.brand)}</p>
       <div className="Store-container">
         <div className="store-left-nav">
           <nav className='store-left'>
@@ -63,7 +62,7 @@ function Page() {
                 <label>Mercedes</label>
               </div>
               <div className="left-nav-input">
-                <input type="radio" name="sass" id="Ferarri" onClick={() => { handelRadio("Ferarri") }} />
+                <input type="radio" name="sass" id="Ferarri" onClick={() => { handelRadio("Ferrari") }} />
                 <label>Ferrari</label>
               </div>
               <div className="left-nav-input">

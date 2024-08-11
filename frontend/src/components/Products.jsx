@@ -13,6 +13,7 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useNavigate } from 'react-router-dom'
 import Footer from './Footer'
+import Poster from './Poster'
 
 
 function Products() {
@@ -29,8 +30,6 @@ function Products() {
     console.log(brand);
     navigate(`/products/${brand}`);
   }
-  
-  
 
   return (
     <div>
@@ -48,7 +47,7 @@ function Products() {
         {/* 2- part */}
         <div className="second-part">
           <h2 className="second-heading">
-            Search By Brands
+            Select By Brands
           </h2>
 
           {/* Cards */}
@@ -137,11 +136,11 @@ function Products() {
 
           </div>
           <div className="third-brands">
-          <h1>Products</h1>
+            <h2>Related Products</h2>
+          <Poster/>
           </div>
         </div>
         <Footer/>
-
       </div>
     </div>
   )

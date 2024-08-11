@@ -7,6 +7,7 @@ import { useState } from 'react';
 import {Link} from "react-router-dom"
 import { useNavigate } from 'react-router-dom';
 import Buynow from './Buynow';
+import Navbar from './Navbar';
 
 function Orders() {
 
@@ -39,6 +40,7 @@ function Orders() {
 
   return (
     <div>
+      <Navbar/>
       <div className="main-ctr-orders">
         <h1>Your Orders</h1>
         {Orderitems.map((item, index) => (
@@ -58,11 +60,8 @@ function Orders() {
               <div className="counts">{count}</div>
               <button className='bdy-btn' onClick={handelinc}>+</button>
             </div>
-
             </div>
-
             { alert ? <Buynow/>: ""}
-
             <div className="buynow">
             <button onClick={handelAlert}>Order now</button>
             </div>

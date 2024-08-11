@@ -38,15 +38,18 @@ html, body {
 }
 
 .container-sign {
-    height: 450px;
+    height: 420px;
     width: 380px;
-    background-color: #D4DEED;
-    border-radius: 5px;
-    box-shadow: rgb(135, 138, 141) 0px 20px 30px -10px;
+    background-color: transparent;
+    border-radius: 8px;
+    /* box-shadow: rgb(135, 138, 141) 0px 20px 30px -10px; */
     /* box-shadow: rgba(204, 201, 201, 0.35) 0px 5px 15px; */
     /* box-shadow: rgba(214, 214, 214, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
+    -moz-box-shadow: 10px 10px 103px 0px rgba(0,0,0,0.75);
+     box-shadow: 10px 10px 103px 0px rgba(0, 0, 0, 0.75);
     color: black;
-    padding: 20px;
+    padding: 30px;
+    backdrop-filter: blur(20px); /* Adjust blur level as needed */
 }
 
 .header-signin {
@@ -60,7 +63,7 @@ html, body {
 .signin-tst {
     font-size: 25px;
     font-weight: 650;
-    color: rgb(216, 27, 27);
+    color: rgb(255, 255, 255);
     margin: 15px;
     padding: 5px;
 }
@@ -68,15 +71,16 @@ html, body {
 .name-sp {
      align-items: center;
      border: none;
-     border-bottom: 2px solid black;
-     background-color: #D4DEED;
+     border-bottom: 2px solid rgb(209, 209, 209);
+     background-color: transparent;
      height: 20px;
+     color: rgb(255, 255, 255);
 }
 
 .name-sp:focus {
     outline: none; 
-    border-bottom: 3px solid #12063d; 
-    background-color: #D4DEED;
+    border-bottom: 3px solid #ffffff; 
+    background-color: transparent;
 }
 
 .button-sp {
@@ -100,7 +104,7 @@ html, body {
 }
 
 .label-sign{
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: 650;
     font-family: sans-serif;
 }
