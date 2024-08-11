@@ -84,7 +84,7 @@ const tokenObj = {
                 <button className="glow-button" type='submit'>Submit</button>
                 </form>
                 {falseData?<div style={{color:"red",fontFamily:"sans-serif",fontSize:"15px"}}>{ErrorData}</div>:""}
-                <Link to='/signin' className="register">
+                <Link to='/signin' className="register" style={{color:"white"}}>
                   Create a account 
                 </Link>
               </div>

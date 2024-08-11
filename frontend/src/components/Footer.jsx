@@ -13,7 +13,7 @@ function Footer() {
             <div className="footer-anc">
             <a href="/home" className='footer-anchor'>Home</a>
             <a href="/about" className='footer-anchor'>About</a>
-            <a href="/products" className='footer-anchor'>Products</a>
+            <a href="/products" className='footer-anchor'>Upload Products</a>
             <a href="/logout" className='footer-anchor'>Logout</a>
             <a href="/careers" className='footer-anchor'>Careers</a>
             </div>
